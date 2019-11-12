@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>billing Page</ion-title>
+    <ion-icon padding slot = end name="log-out"  routerLink='/home'></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card  id="printable-area">
+    <ion-card-header>
+      <ion-card-title>Billing Page</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+          <div class="ion-padding">
+            <ion-label>Bill No</ion-label>
+            <ion-label>{{this.Bdata.bilNo}}</ion-label>
+            <ion-label>Bill Date</ion-label>
+            <ion-label>{{this.Bdata.billDate}}</ion-label>
+            <ion-label>BGold Rate</ion-label>
+            <ion-label>{{this.Bdata.goldRate}}</ion-label>
+            <ion-label>Jewl Type</ion-label>
+            <ion-label>{{this.Bdata.jewlType}}</ion-label>
+            <ion-label>No of Grams</ion-label>
+            <ion-label>{{this.Bdata.wastageCharge}}</ion-label>
+            <ion-label>Wastage</ion-label>
+            <ion-label>{{this.Bdata.wastageCharge}}</ion-label>
+            <ion-label>Making charges</ion-label>
+            <ion-label>{{this.Bdata.makingCharge}}</ion-label>
+            <ion-label>GST</ion-label>
+            <ion-label>{{this.Bdata.GST}}</ion-label>
+            <ion-label>Total Price</ion-label>
+            <ion-label>{{this.Bdata.totalPricewTGST}}</ion-label>
+            </div>            
+    </ion-card-content>    
+</ion-card> 
+<ion-button (click) = "exportPdf()">Generate Bill</ion-button>
+</ion-content>

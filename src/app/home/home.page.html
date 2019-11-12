@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      JSMS
+    </ion-title>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  class ="loginBoarder"> 
+    <form [formGroup]="controls" >
+    <ion-card class = "background-image" >
+        <ion-card-header>
+          <ion-card-title>Login</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <div class="ion-padding" >
+                <ion-label >User Name</ion-label>
+               <ion-input type = text  placeholder="Enter User Name" formControlName="userName" clearinput ></ion-input>                
+              </div>
+              <div class="ion-padding">
+                  <ion-label >Password</ion-label>
+                 <ion-input type = password placeholder="Enter Password" formControlName="password">  
+                 </ion-input> 
+                </div>
+                <div >
+                <ion-button class = "btnleft"  (click) = "loginOnClicking()"  [disabled]="!controls.valid">User Login</ion-button>
+                <ion-button class = "btnRight" [disabled]="!controls.valid" (click) = "loginOnClicking()">Admin Login</ion-button>
+                </div>
+        </ion-card-content>
+    </ion-card>  
+    </form>
+</ion-content>

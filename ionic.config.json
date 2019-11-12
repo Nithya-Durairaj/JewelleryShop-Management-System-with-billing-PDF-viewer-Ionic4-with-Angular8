@@ -1,0 +1,7 @@
+{
+  "name": "JSMS",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

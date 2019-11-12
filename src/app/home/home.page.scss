@@ -1,0 +1,42 @@
+
+.loginBoarder{
+    border: thick double #32a1ce;
+    padding-top: 1em;
+}
+
+ion-card-title{
+    text-align: center;
+}
+.btnleft{
+    padding-left: 2%;
+    font: bold;
+    color: white;
+    font-family: sans-serif;
+}
+
+.btnRight{
+    padding-right: 5%;
+    font: bold;
+    color: white;
+    font-family: sans-serif;
+}
+
+ion-input{
+    border: 2em;
+    width: 40%;
+    font: bold;
+    font-family: sans-serif;
+    background: white;
+    
+}
+
+.background-image{ 
+    background: url('../../assets/img/jewImg4.jpg') 0 0/100% 100% no-repeat;
+    
+}
+
+ion-card-title,ion-label{
+    font: bold;
+    font-family: sans-serif;
+    color: white;
+}

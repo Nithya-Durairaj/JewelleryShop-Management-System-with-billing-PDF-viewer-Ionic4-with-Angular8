@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-title>Billing Calculation Page</ion-title>
+     <!--- <ion-button slot = end class = "btnRight" routerLink='/home'>logout</ion-button>-->
+     <ion-icon padding slot = end name="log-out"  routerLink='/home'></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="controls" >
+    <ion-item>
+      <ion-label>Gold Rate</ion-label>
+        <ion-input slot = end type="number" formControlName= GoldRate  placeholder="Enter Gold rate" ></ion-input>
+      </ion-item> 
+      <ion-item>
+          <ion-label>No of Gram</ion-label>
+          <ion-input slot = end type="number" formControlName= gram  placeholder="Enter no of gram " ></ion-input>    
+      </ion-item>         
+    <ion-item>
+      <ion-label>Jewellery Type </ion-label>
+      <ion-select  placeholder="Select" formControlName= JewType >
+      <ion-select-option *ngFor="let data of BillingData" >{{data.name}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>wastage </ion-label>
+      <ion-select type="number" formControlName= wastageCharge placeholder="Select">
+      <ion-select-option *ngFor="let data of BillingData" >{{data.WSTG}}</ion-select-option>
+      </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Making Charges</ion-label>
+        <ion-select type="number" formControlName= makingCharge placeholder="Select" >
+        <ion-select-option *ngFor="let data of BillingData" >{{data.MKC}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    <ion-item>
+      <ion-label>GST </ion-label>
+      <ion-label class="lblRight" slot = end>{{GST}}</ion-label>
+    </ion-item>
+    <ion-item> 
+      <ion-label>Total Price Without GST </ion-label>
+      <ion-label class="lblRight" slot = end>{{totalPricewOTGST}} </ion-label>
+    </ion-item> 
+    <ion-item>
+        <ion-label>Total Price With GST </ion-label>
+        <ion-label class="lblRight" slot = end>{{totalPricewTGST}} </ion-label>
+      </ion-item> 
+  </form>
+    <ion-grid>
+        <ion-row>
+          <ion-col size="8" offset="3">
+                <ion-button class = "btnleft" ion-button type="submit" [disabled]="!controls.valid" (click)= "priceCalculation()">Calculate</ion-button>           
+                <ion-button class = "btnRight" ion-button (click) = "navigetToBillingPage()" [disabled]="!controls.valid">Generate Bill</ion-button>            
+          </ion-col>
+        </ion-row>
+      </ion-grid> 
+</ion-content>
