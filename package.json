@@ -36,7 +36,7 @@
     "cordova-plugin-inappbrowser": "^3.1.0",
     "core-js": "^2.5.4",
     "dom-to-image": "^2.6.0",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.5.1",
     "pdfmake": "^0.1.61",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
